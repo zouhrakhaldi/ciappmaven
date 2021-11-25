@@ -12,8 +12,8 @@ image: maven:latest
 stages:
     - build
     - test
-   # - package
-    #- deploy
+    - package
+    - deploy
 
 
 cache:
