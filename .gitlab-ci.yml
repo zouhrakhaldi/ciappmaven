@@ -10,10 +10,10 @@ variables:
 image: maven:latest
 
 stages:
-- build
-#- test
-#- package
-#- deploy
+  - build
+  #- test
+  #- package
+  #- deploy
 
 cache:
   paths:
