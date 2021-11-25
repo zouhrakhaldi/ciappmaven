@@ -14,8 +14,7 @@ stages:
     - test
     - package
     - deploy
-
-
+    
 cache:
   paths:
     - .m2/repository
