@@ -18,7 +18,8 @@ stages:
 
 build_job:
   stage: build
-  tags: docker
+  tags: 
+    - docker
   script:
     - echo "compilation en cours ..."
     - "mvn compile"
