@@ -5,15 +5,16 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 variables:
-  MAVEN_OPTS: -Dmaven.repo.local= .m2/repository
+  MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
 
 image: maven:latest
 
 stages:
-  - build
-  #- test
-  #- package
-  #- deploy
+    - build
+    #- test
+   # - package
+    #- deploy
+
 
 cache:
   paths:
@@ -22,9 +23,9 @@ cache:
 
 build_job:
   stage: build
-  tags: 
-    - docker
-  script:
-    - echo "compilation en cours ..."
-    - "mvn compile"
+  tags:
+    - docker 
 
+  script: 
+    - echo "Maven compile started"
+    - "mvn compile"
